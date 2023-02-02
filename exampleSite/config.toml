@@ -1,7 +1,7 @@
 ################################# Default configuration ###################
-baseURL = "https://demo.gethugothemes.com/ps-lab/examplesite/"
-title = "PS Lab "
-theme = "pslab-hugo"
+baseURL = "https://demo.gethugothemes.com/aggregate-computing/examplesite/"
+title = "Aggregate Computing Hugo "
+theme = "aggregate-computing-theme"
 # post pagination
 paginate = "6"
 # post excerpt
