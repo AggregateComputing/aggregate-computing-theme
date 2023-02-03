@@ -1,0 +1,22 @@
+{{- $bibtex := .Get "bibtex" | default false -}}
+{{- $doi := .Get "doi" | default "10.1057/jos.2012.27" -}}
+{{- $separator := .Get "separator" | default "#" -}}
+{{- if $bibtex }}
+    {{- $result := getCSV $separator (printf "https://doi.org/%s" $doi) (dict "Accept" "application/x-bibtex") -}}
+    {{- $sad := $result -}}
+    {{- $result = apply $result "index" "." 0 -}}
+    {{- $code := index $result 0 -}}
+    {{- range $line := (last (add (len $result) -1) $result) -}}
+        {{- $code = printf "%s\n%s" $code $line -}}
+    {{- end -}}
+    {{- highlight $code "bibtex" }}
+{{- else -}}
+    {{- $style := .Get "style" | default "application/vnd.citationstyles.csl+json" -}}
+    {{- $result := getJSON (printf "https://doi.org/%s" $doi) (dict "Accept" "application/vnd.citationstyles.csl+json") -}}
+    {{- index $result "title" -}}
+    {{range index $result "author"}}
+        <p>{{.family}}</p>
+    {{end}}
+    
+    <a href="https://doi.org/{{- $doi -}}"></a>
+{{- end -}}
