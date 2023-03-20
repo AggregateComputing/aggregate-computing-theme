@@ -20,11 +20,11 @@
 			{{.citations}}
 			{{ range .publications }}
 			<div class="col-lg-4 text-center wow fadeInUp" data-wow-duration="500ms">
-				<div class="block" style="height: 480px">
+				<div class="block" style="height: 580px">
 					<div class="icon-box">
 						<i class="ti-cup"></i>
 					</div>
-					{{- $result := getJSON (printf "https://doi.org/%s" .) (dict "Accept" "application/vnd.citationstyles.csl+json") -}}
+					{{- $result := getJSON (printf "https://doi.org/%s" .doi) (dict "Accept" "application/vnd.citationstyles.csl+json") -}}
 					<div class="content text-center">
 						<h3>{{- index $result "title" -}}</h3>
 						<p class="color">{{range index $result "author"}}
@@ -32,6 +32,7 @@
 					{{end}}
 					</p>
 					<a href='{{- index $result "URL" -}}' class="stretched-link"></a>
+					{{.short}}
 					</div>
 				</div>
 			</div>

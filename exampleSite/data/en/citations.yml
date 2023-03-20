@@ -3,6 +3,9 @@ citations:
   enable : true
   title : "Key publications"
   publications:
-    - "10.1109/MC.2015.261"
-    - "10.1016/j.engappai.2020.104081"
-    - "10.1109/MC.2015.261"
+    - doi: "10.1109/MC.2015.261"
+      short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel diam eleifend, auctor sapien ac, commodo arcu. Phasellus ut lectus orci. Mauris eget leo vestibulum, consequat elit id, rhoncus diam."
+    - doi: "10.1016/j.engappai.2020.104081"
+      short: ""
+    - doi: "10.1109/MC.2015.261"
+      short: "Nullam laoreet aliquam nulla a condimentum. In vehicula neque a sem pellentesque imperdiet at vel lorem. Pellentesque ut eros ornare, feugiat nisi nec, imperdiet nisl. Praesent eget nulla non justo rutrum iaculis vel non turpis. Curabitur varius lectus vitae posuere tempor"
