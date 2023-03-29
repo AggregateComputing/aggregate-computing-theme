@@ -4,7 +4,7 @@
     <div class="team-member hover-shadow">
       <div class="member-photo">
         {{"<!-- member photo -->" | safeHTML}}
-        <img height="400px" class="fixed_image lozad" data-src="{{ .image_webp | absURL }}" onerror="this.onerror=null;this.src='{{ .image | absURL }}'" alt="{{ .name }}">
+        <img class="fixed_image lozad" data-src="{{ .image_webp | absURL }}" onerror="this.onerror=null;this.src='{{ .image | absURL }}'" alt="{{ .name }}">
 
         {{"<!-- member social profile -->" | safeHTML}}
           <div class="mask">

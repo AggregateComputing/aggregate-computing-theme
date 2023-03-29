@@ -86,3 +86,9 @@ iframe {
 	}
 }
 
+.fixed_image {
+	height: 250px;
+	object-position: center;
+  object-fit: cover;
+	width: 100%;
+}
